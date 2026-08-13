@@ -130,15 +130,8 @@
     .form-row input, .form-row textarea, .form-row select { width: 100%; padding: 10px 14px; border: 1.5px solid #e5e7eb; border-radius: 6px; font-size: 0.93rem; font-family: inherit; color: var(--text); transition: border-color .2s; background: var(--white); }
     .form-row input:focus, .form-row textarea:focus, .form-row select:focus { outline: none; border-color: var(--teal); }
     .form-row textarea { resize: vertical; min-height: 80px; }
-    .hero-form-stars { background: var(--white); padding: 18px 24px 14px; text-align: center; border-bottom: 1px solid #efefef; }
-    .hero-form-stars .stars-row { color: #f5c518; font-size: 1.6rem; letter-spacing: 3px; margin-bottom: 10px; }
-    .hero-form-stars .stars-sources { display: flex; justify-content: center; align-items: center; gap: 14px; }
-    .src-fb { font-size: 0.92rem; font-weight: 800; color: #1877f2; font-family: 'Segoe UI', sans-serif; letter-spacing: -0.01em; }
-    .src-fb::after { content: '.'; }
-    .src-g { font-size: 0.92rem; font-weight: 700; font-family: 'Product Sans', 'Segoe UI', sans-serif; }
-    .src-g .gl { color: #4285F4; } .src-g .go1 { color: #EA4335; } .src-g .go2 { color: #FBBC05; } .src-g .gg { color: #4285F4; } .src-g .gl2 { color: #34A853; } .src-g .ge { color: #EA4335; }
-    .src-y { font-size: 0.92rem; font-weight: 900; color: #d32323; font-family: 'Segoe UI', sans-serif; letter-spacing: -0.02em; }
-    .src-y .yelp-burst { font-size: 0.65rem; vertical-align: super; color: #d32323; }
+    .hero-form-credible { background: var(--white); padding: 16px 24px 14px; text-align: center; border-bottom: 1px solid #efefef; }
+    .hero-form-credible img { max-width: 200px; height: auto; }
     .check-group { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .check-item { display: flex; align-items: center; gap: 7px; font-size: 0.83rem; color: var(--text); cursor: pointer; }
     .check-item input[type="checkbox"] { accent-color: var(--teal); width: 15px; height: 15px; flex-shrink: 0; }
@@ -283,17 +276,9 @@
       </div>
     </div>
     <div class="hero-form-panel">
-      <div class="hero-form-credible">
-        <img src="images/credible-3_25.png" alt="Top Rated Plumber" />
-      </div>
       <div class="hero-form-card">
-        <div class="hero-form-stars">
-          <div class="stars-row">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="stars-sources">
-            <span class="src-fb">facebook</span>
-            <span class="src-g"><span class="gl">G</span><span class="go1">o</span><span class="go2">o</span><span class="gg">g</span><span class="gl2">l</span><span class="ge">e</span></span>
-            <span class="src-y">yelp<span class="yelp-burst">&#10033;</span></span>
-          </div>
+        <div class="hero-form-credible">
+          <img src="images/credible-3_25.png" alt="Top Rated Plumber" />
         </div>
         <div class="hero-form-header">
           <h3>Get a Free Estimate</h3>
