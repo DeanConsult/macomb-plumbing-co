@@ -127,9 +127,13 @@
     .hero-form-body { padding: 20px 24px 24px; }
     .form-row { margin-bottom: 14px; }
     .form-row label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--muted); margin-bottom: 5px; text-transform: uppercase; letter-spacing: .04em; }
-    .form-row input, .form-row textarea { width: 100%; padding: 10px 14px; border: 1.5px solid #e5e7eb; border-radius: 6px; font-size: 0.93rem; font-family: inherit; color: var(--text); transition: border-color .2s; background: var(--white); }
-    .form-row input:focus, .form-row textarea:focus { outline: none; border-color: var(--teal); }
+    .form-row input, .form-row textarea, .form-row select { width: 100%; padding: 10px 14px; border: 1.5px solid #e5e7eb; border-radius: 6px; font-size: 0.93rem; font-family: inherit; color: var(--text); transition: border-color .2s; background: var(--white); }
+    .form-row input:focus, .form-row textarea:focus, .form-row select:focus { outline: none; border-color: var(--teal); }
     .form-row textarea { resize: vertical; min-height: 80px; }
+    .hero-form-stars { background: var(--white); padding: 14px 24px 12px; text-align: center; border-bottom: 1px solid #f0f0f0; }
+    .hero-form-stars .stars-row { color: #f5c518; font-size: 1.35rem; letter-spacing: 2px; margin-bottom: 6px; }
+    .hero-form-stars .stars-sources { font-size: 0.77rem; font-weight: 700; display: flex; justify-content: center; align-items: center; gap: 8px; }
+    .src-fb { color: #1877f2; } .src-g { color: #4285f4; } .src-y { color: #d32323; } .src-dot { color: #ccc; }
     .check-group { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .check-item { display: flex; align-items: center; gap: 7px; font-size: 0.83rem; color: var(--text); cursor: pointer; }
     .check-item input[type="checkbox"] { accent-color: var(--teal); width: 15px; height: 15px; flex-shrink: 0; }
@@ -216,7 +220,7 @@
     .contact-img { border-radius: 12px; overflow: hidden; height: 220px; margin-bottom: 24px; }
     .contact-img img { width: 100%; height: 100%; object-fit: cover; }
     .contact-form-wrap h2 { font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 20px; }
-    .contact-form .form-row input, .contact-form .form-row textarea { background: var(--gray); }
+    .contact-form .form-row input, .contact-form .form-row textarea, .contact-form .form-row select { background: var(--gray); }
     .contact-form .form-submit { background: var(--teal); }
     .contact-form .form-submit:hover { background: var(--teal-dark); }
 
@@ -278,6 +282,12 @@
         <img src="images/credible-3_25.png" alt="Top Rated Plumber" />
       </div>
       <div class="hero-form-card">
+        <div class="hero-form-stars">
+          <div class="stars-row">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="stars-sources">
+            <span class="src-fb">Facebook</span><span class="src-dot">·</span><span class="src-g">Google</span><span class="src-dot">·</span><span class="src-y">Yelp</span>
+          </div>
+        </div>
         <div class="hero-form-header">
           <h3>Get a Free Estimate</h3>
           <p>We respond within 1 business hour</p>
@@ -301,15 +311,16 @@
             </div>
             <div class="form-row">
               <label>Service Needed</label>
-              <div class="check-group">
-                <label class="check-item"><input type="checkbox" name="service" value="Drain Cleaning" /> Drain Cleaning</label>
-                <label class="check-item"><input type="checkbox" name="service" value="Pipe Repair / Leak" /> Pipe Repair / Leak</label>
-                <label class="check-item"><input type="checkbox" name="service" value="Water Heater" /> Water Heater</label>
-                <label class="check-item"><input type="checkbox" name="service" value="Toilet Repair" /> Toilet Repair</label>
-                <label class="check-item"><input type="checkbox" name="service" value="Faucet / Fixture" /> Faucet / Fixture</label>
-                <label class="check-item"><input type="checkbox" name="service" value="Emergency Service" /> Emergency Service</label>
-                <label class="check-item"><input type="checkbox" name="service" value="Other" /> Other</label>
-              </div>
+              <select name="service">
+                <option value="">— Select a service —</option>
+                <option value="Drain Cleaning">Drain Cleaning</option>
+                <option value="Pipe Repair / Leak">Pipe Repair / Leak</option>
+                <option value="Water Heater">Water Heater</option>
+                <option value="Toilet Repair">Toilet Repair</option>
+                <option value="Faucet / Fixture">Faucet / Fixture</option>
+                <option value="Emergency Service">Emergency Service</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
             <div class="form-row">
               <label>Comment (optional)</label>
@@ -509,15 +520,16 @@
       </div>
       <div class="form-row">
         <label>Service Needed</label>
-        <div class="check-group">
-          <label class="check-item"><input type="checkbox" name="service" value="Drain Cleaning" /> Drain Cleaning</label>
-          <label class="check-item"><input type="checkbox" name="service" value="Pipe Repair / Leak" /> Pipe Repair / Leak</label>
-          <label class="check-item"><input type="checkbox" name="service" value="Water Heater" /> Water Heater</label>
-          <label class="check-item"><input type="checkbox" name="service" value="Toilet Repair" /> Toilet Repair</label>
-          <label class="check-item"><input type="checkbox" name="service" value="Faucet / Fixture" /> Faucet / Fixture</label>
-          <label class="check-item"><input type="checkbox" name="service" value="Emergency Service" /> Emergency Service</label>
-          <label class="check-item"><input type="checkbox" name="service" value="Other" /> Other</label>
-        </div>
+        <select name="service">
+          <option value="">— Select a service —</option>
+          <option value="Drain Cleaning">Drain Cleaning</option>
+          <option value="Pipe Repair / Leak">Pipe Repair / Leak</option>
+          <option value="Water Heater">Water Heater</option>
+          <option value="Toilet Repair">Toilet Repair</option>
+          <option value="Faucet / Fixture">Faucet / Fixture</option>
+          <option value="Emergency Service">Emergency Service</option>
+          <option value="Other">Other</option>
+        </select>
       </div>
       <div class="form-row">
         <label>Comment (optional)</label>
